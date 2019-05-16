@@ -1,0 +1,44 @@
+{% assign pages = site.pages | sort:"weight"  %}
+<div id="header_wrap">
+  <section id="header">
+    <div class="global-header">
+      <div class="global-header__row __row1">
+        <nav class="global-header__nav-satellite">
+          <div class="global-header__nav-satellite__item">
+            <a href="//www.puppet.com" class="offsite">puppet.com</a>
+          </div>
+          <div class="global-header__nav-satellite__item">
+            <a href="//puppet.com/docs" class="offsite">Docs</a>
+          </div>
+          <div class="global-header__nav-satellite__item">
+            <a href="//forge.puppet.com/" class="offsite">Forge</a>
+          </div>
+          <div class="global-header__nav-satellite__item">
+            <a href="//learn.puppet.com/" class="offsite">Learn</a>
+          </div>
+          <div class="global-header__nav-satellite__item">
+            <a href="//puppet.com/company/contact" class="offsite">Contact</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="global-header__row __row2">
+        <div class="global-header__row__col __col1">
+          <a href="/">
+            <img src="/assets/images/logo.png">
+          </a>
+        </div>
+        <div class="global-header__row__col __col2">
+          <nav class="global-header__nav-main">
+            {% for p in pages %}
+              <div class="global-header__nav-main__item {% if p.url == page.url %}active{% endif %}">
+                <a href="{{ p.url }}" class="dropdown__tab">
+                  <div class="dropdown__tab__title">{{ p.tab }}</div>
+                </a>
+              </div>
+            {% endfor %}
+          </nav>
+      </div>
+    </div>
+  </section>
+</div>

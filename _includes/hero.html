@@ -1,0 +1,11 @@
+<header class="hero {{ page.hero.size }}" style="background-image: url(/assets/images/hero/{{page.hero.image}})">
+  <h1 id="project_title">{{page.title | escape }}</h1>
+  <h2 id="project_tagline">{{page.tagline | escape }}</h2>
+  {% if page.buttons %}
+    <ul>
+    {% for button in page.buttons %}
+      <li class="btn solid-orange-on-white"><a href="{{ button.url }}">{{ button.text }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</header>

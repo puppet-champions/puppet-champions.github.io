@@ -1,0 +1,15 @@
+# Build settings
+exclude: ['README.md', 'Rakefile']
+highlighter: rouge
+collections:
+  puppeteers:
+    output: true
+  champions:
+    output: true
+
+github-testing:
+  project_title: Puppet Champions
+  project_tagline: "Empowering a better and more pervasive Puppet Community."
+  owner_name: puppet-champions
+  owner_url: https://github.com/puppet-champions
+  repository_url: https://github.com/puppetlabs/showoff

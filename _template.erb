@@ -1,0 +1,17 @@
+---
+layout: profile
+name: <%= member['name'] || member['login'] %>
+image: <%= member['avatar_url'] %>
+bio: <%= member['bio'] %>
+---
+
+# <%= member['name'] || member['login'] %>
+
+<%= member['bio'] %>
+
+<%= member['login'] %>
+<%= member['company'] %>
+<%= member['location'] %>
+<% if member.include? 'blog' %>
+[<%= member['blog'] %>](<%= member['blog'] %>)
+<% end %>
