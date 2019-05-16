@@ -1,14 +1,15 @@
 Hello <%= member['name'] || member['login'] %>, and welcome to _Puppet Champions_!
 
 Your first task is to update this PR to match what you'd like your profile to
-look like, and then approve it when you're done. Switch to see the files, then
- click the `...` icon on the upper right of this file to access the edit interface.
+look like, and then approve it when you're done. Switch to the _Files changed_ tab, then
+click the `...` icon at the upper right of this file to access the editor.
 [[See GitHub documentation](https://help.github.com/en/articles/approving-a-pull-request-with-required-reviews)]
 
 We use the Jekyll templating system for this site. The first section, between
 the dashed lines, is called [_Front Matter_](https://jekyllrb.com/docs/front-matter/). It defines certain variables that we use
-to construct your profile. Do not change the keys (the part before the `:`).
+to construct your profile. Do not change the keys (the part before the `:`) or the layout.
 
+* The `name` key defines the name displayed on the profiles listing and the headline of your own profile page.
 * The `image` key should point to a url of the image you'd like to appear for your profile.
   * If you'd like, you can add it to this repository in the [assets/images/profiles](https://github.com/puppet-community/puppet-community.github.io/tree/master/assets/images/profiles) directory.
   * You'd refer to an image there with a URL of `/assets/images/profiles/{yourname}.jpg`.
