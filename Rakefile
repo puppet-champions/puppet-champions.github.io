@@ -27,8 +27,8 @@ rescue => e
   exit 1
 end
 
-org  = 'puppet-community'
-repo = 'puppet-community/puppet-community.github.io'
+org  = 'puppet-champions'
+repo = 'puppet-champions/puppet-champions.github.io'
 
 admins     = client.team_members(client.org_teams(org).find {|t| t[:name] == 'Admins'}[:id])
 puppeteers = client.team_members(client.org_teams(org).find {|t| t[:name] == 'Extraordinary Puppeteers'}[:id])
