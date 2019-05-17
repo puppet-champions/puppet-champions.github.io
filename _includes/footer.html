@@ -40,36 +40,48 @@
     <div class="fg-col category-col">
       <div class="col-title">Join our mailing list</div>
       <p>Get our monthly newsletter and the occasional email we think you'll like.</p>
-      <script type="text/javascript" src="//puppet.com/sites/default/files/mktFormSupport.js"></script><form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="//app-sjh.marketo.com/index.php/leadCapture/save" id="mktForm_1047" name="mktForm_1047">
+      <script type="text/javascript" src="//puppet.com/sites/default/files/mktFormSupport.js"></script><form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="https://app-sjh.marketo.com/index.php/leadCapture/save" id="mktForm_1047" name="mktForm_1047">
         <div class="newsletter-row email-wrapper">
           <input name="Email" id="Email" type="email" placeholder="Enter your email" class="mktFormText mktFormEmail mktFReq" maxlength="255" tabindex="1" value="">
-          <input class="mktFormHidden" name="Form_Name__c" id="Form_Name__c" type="hidden" value="Newsletter">
-          <input class="mktFormHidden" name="Current_Form_Name__c" id="Current_Form_Name__c" type="hidden" value="Newsletter">
-          <input class="mktFormHidden" name="Original_Campaign_ID__c" id="Original_Campaign_ID__c" type="hidden" value="701G0000000F68K">
-          <input class="mktFormHidden" name="campaign_ID__c" id="campaign_ID__c" type="hidden" value="701G0000000F68K">
-          <input class="mktFormHidden" name="Current_Lead_Source__c" id="Current_Lead_Source__c" type="hidden" value="Organic">
-          <input class="mktFormHidden" name="LeadSource" id="LeadSource" type="hidden" value="Organic">
-          <input class="mktFormHidden" name="LeadSourceDescription__c" id="LeadSourceDescription__c" type="hidden" value="Search">
-          <input class="mktFormHidden" name="CurrentLeadSourceDescription__c" id="CurrentLeadSourceDescription__c" type="hidden" value="Search">
-          <input class="mktFormHidden" name="Custom_Campaign__c" id="Custom_Campaign__c" type="hidden" value="null">
-          <input class="mktFormHidden" name="Current_Custom_Campaign__c" id="Current_Custom_Campaign__c" type="hidden" value="null">
-          <input class="mktFormHidden" name="honeypot" id="honeypot" type="hidden" value="null">
-          <input id="mktFrmSubmit" style="display:none;" type="submit" value="" name="submitButton">
-          <span style="display:none;"><input type="text" name="_marketo_comments" value=""></span>
-          <input type="hidden" name="lpId" value="-1">
-          <input type="hidden" name="subId" value="100">
-          <input type="hidden" name="munchkinId" value="307-QLA-991">
-          <input type="hidden" name="kw" value="">
-          <input type="hidden" name="cr" value="">
-          <input type="hidden" name="searchstr" value="">
-          <input type="hidden" name="lpurl" value="http://info.puppetlabs.com/newslettersubscribe.html?cr={creative}&amp;kw={keyword}">
-          <input type="hidden" name="formid" value="1047">
-          <input type="hidden" name="returnURL" value="http://www.puppet.com">
-          <input type="hidden" name="retURL" value="http://www.puppet.com/misc/subscription-thank-you">
-          <input type="hidden" name="returnLPId" value="-1">
-          <input type="hidden" name="_mkt_disp" value="return">
-          <input type="hidden" name="_mkt_trk" value="">
+          <img src="//puppet.com/themes/hoverboard/images/puppet-icons/small-arrow-gray.svg" class="form-submit-icon" id="form-submit-icon" title="Join">
         </div>
+        <input class="mktFormHidden" name="Form_Name__c" id="Form_Name__c" type="hidden" value="Newsletter">
+        <input class="mktFormHidden" name="Current_Form_Name__c" id="Current_Form_Name__c" type="hidden" value="Newsletter">
+        <input class="mktFormHidden" name="Original_Campaign_ID__c" id="Original_Campaign_ID__c" type="hidden" value="701G0000000F68K">
+        <input class="mktFormHidden" name="campaign_ID__c" id="campaign_ID__c" type="hidden" value="701G0000000F68K">
+        <input class="mktFormHidden" name="Current_Lead_Source__c" id="Current_Lead_Source__c" type="hidden" value="Organic">
+        <input class="mktFormHidden" name="LeadSource" id="LeadSource" type="hidden" value="Organic">
+        <input class="mktFormHidden" name="LeadSourceDescription__c" id="LeadSourceDescription__c" type="hidden" value="Search">
+        <input class="mktFormHidden" name="CurrentLeadSourceDescription__c" id="CurrentLeadSourceDescription__c" type="hidden" value="Search">
+        <input class="mktFormHidden" name="Custom_Campaign__c" id="Custom_Campaign__c" type="hidden" value="null">
+        <input class="mktFormHidden" name="Current_Custom_Campaign__c" id="Current_Custom_Campaign__c" type="hidden" value="null">
+        <input class="mktFormHidden" name="honeypot" id="honeypot" type="hidden" value="null">
+        <input id="mktFrmSubmit" style="display:none;" type="submit" value="" name="submitButton">
+        <span style="display:none;"><input type="text" name="_marketo_comments" value=""></span>
+        <input type="hidden" name="lpId" value="-1">
+        <input type="hidden" name="subId" value="100">
+        <input type="hidden" name="munchkinId" value="307-QLA-991">
+        <input type="hidden" name="kw" value="">
+        <input type="hidden" name="cr" value="">
+        <input type="hidden" name="searchstr" value="">
+        <input type="hidden" name="lpurl" value="http://info.puppetlabs.com/newslettersubscribe.html?cr={creative}&amp;kw={keyword}">
+        <input type="hidden" name="formid" value="1047">
+        <input type="hidden" name="returnURL" value="http://www.puppet.com">
+        <input type="hidden" name="retURL" value="http://www.puppet.com/misc/subscription-thank-you">
+        <input type="hidden" name="returnLPId" value="-1">
+        <input type="hidden" name="_mkt_disp" value="return">
+        <input type="hidden" name="_mkt_trk" value="">
+        <script type="text/javascript">
+          /* why? */
+          document.getElementById('Email').addEventListener('keypress', function(event) {
+            if (event.keyCode == 13) {
+                document.getElementById('mktForm_1047').submit();
+            }
+          });
+          document.getElementById('form-submit-icon').addEventListener('click', function() {
+            document.getElementById('mktForm_1047').submit();
+          });
+        </script>
       </form>
       <div class="newsletter-row">
         <a href="//twitter.com/puppetize" class="social-icon">

@@ -694,6 +694,16 @@ html:not(.csscalc) .layout-footer .footer-row-1 > .fg-col:last-child {
   margin: 0 0 10px 0;
 }
 
+.layout-footer .footer-row-1 > .fg-col .newsletter-row.email-wrapper img {
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: calc(50% + 8px);
+  right: -32px;
+  cursor: pointer;
+}
+
 .layout-footer .footer-row-1 .social-icon {
   float: left; }
 
