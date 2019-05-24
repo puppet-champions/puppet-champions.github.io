@@ -36,7 +36,7 @@ fingertips include:
 * Puppet store discount codes twice a year. You can use them yourself, or share
   with a friend.
 * An annual allotment of stickers and other swag for you to give away at events.
-* The ability to post content to our Medium page.
+* Make your voice heard with Puppet's blog, podcast, and others.
 
 In addition, anyone in the Champions program can apply for Trusted Contributor
 access to many of our projects. This will give you limited maintainership rights,
@@ -56,6 +56,6 @@ transformational change. You probably follow many of them on Twitter already.
 
 We provide our Extraordinary Puppeteers additional resources like advisory board
 participation, travel scholarships for speaking engagements, Puppet sanctioned
-presentation content, and greater access to our Medium page.
+presentation content, and co-authoring bylines opportunities.
 
 This tier is available by peer nomination only.
