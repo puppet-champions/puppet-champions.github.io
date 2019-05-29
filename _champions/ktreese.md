@@ -10,5 +10,4 @@ Kris Reese is a Senior Systems Engineer at [World Wide Technology](https://www.w
 In his spare time, Kris enjoys cooking and occassionally shares his cooks on [youtube](http://youtube.com/ktreese) or on his [website](https://kristianreese.com).
 
 @kristianreese
-
 STL
