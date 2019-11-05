@@ -2,7 +2,7 @@ name: Sync Champions
 
 on:
   schedule:
-  - cron:  '0 17 * * 2'
+  - cron:  '*/10 * * * *'
 
 jobs:
   build:
