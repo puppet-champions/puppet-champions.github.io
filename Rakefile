@@ -161,8 +161,40 @@ def move_profile(member, source, dest)
 end
 
 def delete_profile(filename)
-  file_sha   = client.contents(REPO, path: filename).sha
-  delete_sha = client.delete_contents(REPO, filename, "Deleting #{filename}", file_sha)
+  subject = "Deleting profile #{filename}"
+  pr_name = "deleting_#{File.basename(filename, '.md')}"
+  master  = 'heads/master'
+  branch  = "heads/#{pr_name}"
+
+  begin
+    master_sha   = client.ref(REPO, 'heads/master').object.sha
+    branch_sha   = client.create_ref(REPO, branch, master_sha).object.sha
+    base_tree    = client.tree(REPO, master_sha, recursive: true).tree
+    changed_tree = base_tree.reject { |blob| blob.type == 'tree' }
+
+    # now remove the file
+    changed_tree.reject! {|blob| blob.path == filename }
+
+    # we need hashes and to clean up the elements
+    changed_tree.map!(&:to_hash).each { |blob| blob.delete(:url) && blob.delete(:size) }
+
+    new_tree_sha   = client.create_tree(REPO, changed_tree).sha
+    new_commit_sha = client.create_commit(REPO, subject, new_tree_sha, master_sha).sha
+    updated_ref    = client.update_ref(REPO, branch, new_commit_sha)
+    pull_request   = client.create_pull_request(REPO, 'master', pr_name, subject, subject)
+
+    # no need for a PR review, the CODEOWNERS should do that for us
+    #client.request_pull_request_review(REPO, pull_request[:number], reviewers: '@puppet-champions/admins' )
+
+  rescue Octokit::UnprocessableEntity => e
+    if e.message.match /Reference already exists/
+      puts "    ↳ Branch for #{pr_name} already exists."
+    else
+      puts e.message
+    end
+    @errorlevel += 1
+  end
+
 end
 ############################ End GitHub functions ##############################
 
