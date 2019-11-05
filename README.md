@@ -13,6 +13,11 @@ about the new member. It's then dropped into a pull request and the user
 is assigned to review, edit, and approve it. Once you, as an admin, merge
 that PR, the site will be rebuilt to include the profile.
 
+User profiles are synced from Nimble weekly using GitHub Actions.
+
+https://github.com/<OWNER>/<REPOSITORY>/workflows/<Sync%20Champions>/badge.svg
+
+
 ## Requirements:
 
 * You must have the `octokit` gem installed
