@@ -2,10 +2,10 @@
 layout: profile
 name: Garrett Honeycutt
 image: https://avatars3.githubusercontent.com/u/313891?v=4
-bio: Providing Puppet automation consulting and training at LearnPuppet.com
+bio: Providing Puppet automation consulting and training at Tailored Automation
 ---
 
-Garrett Honeycutt, Principal at [GH Solutions](http://learnpuppet.com/),
+Garrett Honeycutt, Principal at [Tailored Automation](https://tailoredautomation.io),
 has been working with open source software and spreading its merits for
 over twenty years. He helps companies automate all aspects of their
 software development life cycle and is passionate about teaching others.
