@@ -37,7 +37,3 @@ hero:
     </li>
   {% endfor %}
 </ul>
-
-------
-
-You can also see the [GitHub organization structure](https://github.com/orgs/puppet-champions/teams) directly.
