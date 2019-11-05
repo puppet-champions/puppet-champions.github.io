@@ -1,0 +1,25 @@
+name: Sync Champions
+
+on:
+  schedule:
+  - cron:  '0 2 * * 2'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+    - name: Send Report
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NIMBLE_TOKEN: ${{ secrets.NIMBLE_TOKEN }}
+        SENDGRID_KEY: ${{ secrets.SENDGRID_KEY }}
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake sync
