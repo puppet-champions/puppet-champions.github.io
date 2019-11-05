@@ -15,7 +15,8 @@ that PR, the site will be rebuilt to include the profile.
 
 User profiles are synced from Nimble weekly using GitHub Actions.
 
-https://github.com/<OWNER>/<REPOSITORY>/workflows/<Sync%20Champions>/badge.svg
+![](https://github.com/puppet-champions/puppet-champions.github.io/workflows/Sync%20Champions/badge.svg)
+
 
 
 ## Requirements:
