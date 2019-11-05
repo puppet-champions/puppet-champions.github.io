@@ -5,7 +5,9 @@ require 'json'
 require 'octokit'
 
 
-REPO = 'puppet-champions/puppet-champions.github.io'
+ORG  = 'puppet-champions'
+REPO = "#{ORG}/puppet-champions.github.io"
+TEAM = 'Champions'
 NIMBLE_TOKEN = ENV['NIMBLE_TOKEN']
 GITHUB_TOKEN = ENV['GITHUB_TOKEN'] || `git config --global github.token`.chomp
 @errorlevel  = 0
@@ -83,6 +85,22 @@ def get_file(path)
     ''
   end
 end
+
+def add_team_member(username)
+  @team_id ||= @client.organization_teams(ORG).find {|team| team['name'] == TEAM }[:id]
+
+  # check first so we don't inadvertently change someone's access level
+  return if client.team_member?(@team_id, username)
+
+  client.add_team_membership(@team_id, username, {:role => 'member'})
+end
+
+def remove_team_member(username)
+  @team_id ||= @client.organization_teams(ORG).find {|team| team['name'] == TEAM }[:id]
+
+  client.remove_team_membership(@team_id, username)
+end
+
 
 def create_profile(member, path)
   profile = ERB.new(get_file('_template.erb')).result(binding)
@@ -239,6 +257,8 @@ task :sync do
       move_profile(member, '_champions', '_puppeteers')
     else
       puts "Creating Puppeteer profile: #{profile}"
+
+      add_team_member(member[:login])
       create_profile(member, '_puppeteers')
     end
   end
@@ -255,6 +275,8 @@ task :sync do
       move_profile(member, '_puppeteers', '_champions')
     else
       puts "Creating Champion profile: #{profile}"
+
+      add_team_member(member[:login])
       create_profile(member, '_champions')
     end
   end
@@ -262,11 +284,13 @@ task :sync do
   # now clean up leftovers
   (puppeteer_profiles - puppeteers.map {|member| "_puppeteers/#{member}.md" }).each do |path|
     puts "Removing #{path}"
+    remove_team_member(File.basename(path, '.md'))
     delete_profile(path)
   end
 
   (champion_profiles - champions.map {|member| "_champions/#{member}.md" }).each do |path|
     puts "Removing #{path}"
+    remove_team_member(File.basename(path, '.md'))
     delete_profile(path)
   end
 
@@ -275,4 +299,3 @@ task :sync do
     abort "There were #{@errorlevel} sync warnings."
   end
 end
-
