@@ -3,35 +3,12 @@ require 'base64'
 require 'httparty'
 require 'json'
 require 'octokit'
-require 'mail'
 
 
 REPO = 'puppet-champions/puppet-champions.github.io'
-SENDGRID_KEY = ENV['SENDGRID_KEY']
 NIMBLE_TOKEN = ENV['NIMBLE_TOKEN']
 GITHUB_TOKEN = ENV['GITHUB_TOKEN'] || `git config --global github.token`.chomp
-SMTP_OPTIONS = {
-  :email     => 'Puppet Community Team <community@puppet.com>',
-  :domain    => 'puppet.com',
-  :user_name => 'apikey',
-  :password  => SENDGRID_KEY,
-  :address   => 'smtp.sendgrid.net',
-  :port      => 587,
-}
-
-Mail.defaults do
-  delivery_method :smtp, SMTP_OPTIONS
-end
-
-def sendmail(subject_line, text)
-  Mail.deliver do
-    to      SMTP_OPTIONS[:email]
-    from    SMTP_OPTIONS[:email]
-    subject subject_line
-    body    text
-  end
-end
-
+@errorlevel  = 0
 
 ############################### Nimble functions ###############################
 def nimble_id_map(name)
@@ -63,11 +40,14 @@ def nimble_group(name)
   without, with = data['resources'].partition {|item| item['fields']['GitHub Username'].nil?}
 
   unless without.empty?
-    no_gh = without.map {|item| item['fields']['email'].first['value'] }
-    sendmail('Puppet Champions: problem with accounts',
-             "The following users have no github account configured: #{no_gh.join(', ')}")
+    puts 'The following Nimble accounts have no GitHub username associated:'
+    without.each do|item|
+      puts "    ↳ #{item['fields']['email'].first['value']}"
+      @errorlevel += 1
+    end
   end
 
+  # now return the ones we do know.
   with.map {|item| item['fields']['GitHub Username'].first['value'] }
 end
 ############################ End Nimble functions ##############################
@@ -138,6 +118,7 @@ def create_profile(member, path)
     else
       puts e.message
     end
+    @errorlevel += 1
   end
 end
 
@@ -175,6 +156,7 @@ def move_profile(member, source, dest)
     else
       puts e.message
     end
+    @errorlevel += 1
   end
 end
 
@@ -254,6 +236,11 @@ task :sync do
   (champion_profiles - champions.map {|member| "_champions/#{member}.md" }).each do |path|
     puts "Removing #{path}"
     delete_profile(path)
+  end
+
+  unless @errorlevel == 0
+    puts '-----------------------------------------'
+    abort "There were #{@errorlevel} sync warnings."
   end
 end
 
