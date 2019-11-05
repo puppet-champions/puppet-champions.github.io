@@ -88,8 +88,6 @@ def client
 
   begin
     @client = Octokit::Client.new(:access_token => GITHUB_TOKEN)
-    @client.user.login
-    @client.auto_paginate = true
   rescue => e
     puts "Github login error: #{e.message}"
     exit 1
@@ -132,9 +130,7 @@ def create_profile(member, path)
     updated_ref    = client.update_ref(REPO, branch, new_commit_sha)
     pull_request   = client.create_pull_request(REPO, 'master', member[:login], subject, welcome)
 
-    unless member[:login] == client.login
-      client.request_pull_request_review(REPO, pull_request[:number], reviewers: [member[:login]] )
-    end
+    client.request_pull_request_review(REPO, pull_request[:number], reviewers: [member[:login]] )
 
   rescue Octokit::UnprocessableEntity => e
     if e.message.match /Reference already exists/
