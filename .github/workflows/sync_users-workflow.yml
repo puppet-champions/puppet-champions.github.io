@@ -2,7 +2,7 @@ name: Sync Champions
 
 on:
   schedule:
-  - cron:  '0 17 * * 3'
+  - cron:  '*/10 * * * *'
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-ruby@v1
     - name: Sync Users
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TEAM_MANAGEMENT_TOKEN }}
         NIMBLE_TOKEN: ${{ secrets.NIMBLE_TOKEN }}
         SENDGRID_KEY: ${{ secrets.SENDGRID_KEY }}
       run: |
