@@ -5,8 +5,6 @@ image: https://avatars2.githubusercontent.com/u/283804?v=4
 bio: More Op than Dev at example42
 ---
 
-# Alessandro Franceschi
-
 Proud participant of the very first PuppetCamp in SanFrancisco, he has continued to work and experiment with Puppet.
 
 He is the author of the original [example42 Puppet modules](https://github.com/example42/puppet-modules-nextgen) set and the [puppi module](https://github.com/example42/puppi) then evolved in the [Psick control-repo](https://github.com/example42/psick), [Tiny Puppet](https://github.com/example42/puppet-tp) and the [psick module](https://github.com/example42/puppet-psick).
