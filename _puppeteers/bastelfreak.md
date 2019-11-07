@@ -5,8 +5,6 @@ image: https://avatars0.githubusercontent.com/u/341866?v=4
 bio: "@virtapi Stack founder, I do things with Arch Linux, and Puppet on @voxpupuli"
 ---
 
-# Tim Meusel
-
 Tim (bastelfreak) Meusel works as a DevOps Engineer for GoDaddy EMEA in Cologne,
 Germany where he develops and maintains a big public cloud platform. Tim is the
 driving force behind various open source solutions at work. He founded the
