@@ -1,7 +1,7 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="description" content="{{site.github.project_tagline | escape }}">
+  <meta name="description" content="{{site.tagline | escape }}">
 
   <link rel="icon" href="/assets/images/favicon.png">
 
@@ -9,5 +9,43 @@
   <link rel="stylesheet" type="text/css" media="screen" href="{{site.github.url}}/assets/css/syntax.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="{{site.github.url}}/assets/css/stylesheet.css" />
 
-  <title>{{site.github.project_title | escape }}</title>
+  <title>{{site.title | escape }}</title>
+
+  <!-- Twitter cards -->
+  <meta name="twitter:site"    content="@puppetize">
+  {% if page.twitter %}
+  <meta name="twitter:creator" content="@{{ page.twitter | escape }}">
+  {% else %}
+  <meta name="twitter:creator" content="@puppetize">
+  {% endif %}
+
+  {% if page.layout == 'profile' %}
+  <meta name="twitter:title"   content="{{ page.name | escape }}">
+    {% if page.bio %}
+    <meta name="twitter:description" content="{{ page.bio | escape }}">
+    {% else %}
+    <meta name="twitter:description" content="{{ site.tagline }}">
+    {% endif %}
+  {% else %}
+    {% if page.title %}
+    <meta name="twitter:title"   content="{{ page.title | escape }}">
+    {% else %}
+    <meta name="twitter:title"   content="{{ site.title | escape }}">
+    {% endif %}
+    {% if page.summary %}
+    <meta name="twitter:description" content="{{ page.summary }}">
+    {% else %}
+    <meta name="twitter:description" content="{{ site.tagline }}">
+    {% endif %}
+  {% endif %}
+
+  {% if page.image %}
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/{{ page.image }}">
+  {% else %}
+  <meta name="twitter:card"  content="summary">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/puppet-champions-logo.png">
+  {% endif %}
+  <!-- end of Twitter cards -->
+
 </head>

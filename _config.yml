@@ -7,6 +7,10 @@ collections:
   champions:
     output: true
 
+title: Puppet Champions
+tagline: "Empowering a better and more pervasive Puppet Community, one Champion at a time."
+
+
 github-testing:
   project_title: Puppet Champions
   project_tagline: "Empowering a better and more pervasive Puppet Community."
