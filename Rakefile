@@ -93,6 +93,9 @@ def add_team_member(username)
   return if client.team_member?(@team_id, username)
 
   client.add_team_membership(@team_id, username, {:role => 'member'})
+
+  # now give github just a moment to sync up so this doesn't fail when requesting a review
+  sleep 2
 end
 
 def remove_team_member(username)
