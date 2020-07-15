@@ -9,6 +9,7 @@ linkedin: raphink
 forge: raphink
 slack: U179CTUPK
 devto: raphink
+stackexchange: 82664/ℝaphink
 ---
 
 Raphaël is an Infrastructure Developer at [Camptocamp](https://camptocamp.com)
