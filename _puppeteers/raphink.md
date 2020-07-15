@@ -3,6 +3,12 @@ layout: profile
 name: Raphaël Pinson
 image: /assets/images/profiles/raphink.jpg
 bio: Automating all the things with Puppet, Augeas, Terraform & Kubernetes!
+twitter: raphink
+github: raphink
+linkedin: raphink
+forge: raphink
+slack: U179CTUPK
+devto: raphink
 ---
 
 Raphaël is an Infrastructure Developer at [Camptocamp](https://camptocamp.com)
@@ -24,7 +30,7 @@ in particular on Puppet, Docker, Terraform & Kubernetes.
 Raphaël is a member of the [Vox Pupuli](https://voxpupuli.org/) and [Hercules Team](https://github.com/hercules-team) communities.
 
 Nowadays, he maintains various automation-related projects, such as
-[Augeas](https://augeas.net), [Augeasproviders](https://augeasproviders.com), 
+[Augeas](https://augeas.net), [Augeasproviders](https://augeasproviders.com),
 [Puppetfile-updater](https://github.com/camptocamp/puppetfile-updater),
 [FacterDB](https://camptocamp.github.io/facterdb/),
 [Puppet Catalog Diff](https://github.com/camptocamp/puppet-catalog-diff) and its [viewer](https://github.com/camptocamp/puppet-catalog-diff-viewer),
