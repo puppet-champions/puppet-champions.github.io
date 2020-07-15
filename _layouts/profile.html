@@ -39,6 +39,9 @@
             {% if page.devto %}
               <a class="icon" href="https://dev.to/{{ page.devto }}"><i class="fab fa-dev" title="Dev.to profile"></i></a>
             {% endif %}
+            {% if page.stackexchange %}
+              <a class="icon" href="https://stackexchange.com/users/{{ page.stackexchange }}"><i class="fab fa-stack-exchange" title="StackExchange profile"></i></a>
+            {% endif %}
             </p>
             <hr />
             {{ content }}
