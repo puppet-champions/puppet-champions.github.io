@@ -909,6 +909,50 @@ html:not(.csscalc) .layout-footer .footer-row-1 > .fg-col:last-child {
   margin: 0 1em 5px;
 }
 
+#main_content .profile .contact {
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+#main_content .profile .contact a {
+  color: black;
+  margin: 0 0.5em;
+}
+#main_content .profile .contact a:hover {
+  color: #ffad1a;
+  text-shadow: 0 0 2px #ffad1a;
+}
+
+
+
+/* Add the custom Pupept DAG icon */
+@font-face {
+  font-family: 'dag';
+  src: url('/assets/fonts/dag.eot?33773300');
+  src: url('/assets/fonts/dag.eot?33773300#iefix') format('embedded-opentype'),
+       url('/assets/fonts/dag.woff?33773300') format('woff'),
+       url('/assets/fonts/dag.ttf?33773300') format('truetype'),
+       url('/assets/fonts/dag.svg?33773300#dag') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-puppet {
+  font-family: "dag";
+  font-style: normal;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+}
+.fa-puppet {
+  font-family: dag !important;
+}
+.fa-puppet:before {
+  content: "\e800";
+}
+
 
 /*******************************************************************************
 Small Device Styles

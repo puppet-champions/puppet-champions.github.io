@@ -20,6 +20,26 @@
             <img class="avatar" src="{{ page.image }}" />
             <h1 class="name">{{ page.name }}</h1>
             <p class="bio">{{ page.bio }}</p>
+            <p class="contact">
+            {% if page.twitter %}
+              <a class="icon" href="https://twitter.com/{{ page.twitter }}"><i class="fab fa-twitter" title="Twitter Profile"></i></a>
+            {% endif %}
+            {% if page.github %}
+              <a class="icon" href="https://github.com/{{ page.github }}"><i class="fab fa-github" title="GitHub Profile"></i></a>
+            {% endif %}
+            {% if page.linkedin %}
+              <a class="icon" href="https://https://www.linkedin.com/in/{{ page.linkedin }}"><i class="fab fa-linkedin" title="LinkedIn Profile"></i></a>
+            {% endif %}
+            {% if page.forge %}
+              <a class="icon" href="https://forge.puppet.com/{{ page.forge }}"><i class="fab fa-puppet" title="Forge Modules"></i></a>
+            {% endif %}
+            {% if page.slack %}
+              <a class="icon" href="https://puppetcommunity.slack.com/team/{{ page.slack }}"><i class="fab fa-slack" title="Slack Account"></i></a>
+            {% endif %}
+            {% if page.devto %}
+              <a class="icon" href="https://dev.to/{{ page.devto }}"><i class="fab fa-dev" title="Dev.to profile"></i></a>
+            {% endif %}
+            </p>
             <hr />
             {{ content }}
           </div>

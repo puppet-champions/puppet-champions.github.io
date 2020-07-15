@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<defs>
+<font id="dag" horiz-adv-x="1000" >
+<font-face font-family="dag" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="puppet2" unicode="&#xe800;" d="M511-27l94 0 0 94-94 0 0-94z m0 662l94 0 0 94-94 0 0-94z m519-425l0 282-215 0 0 0-116 116 0 215-282 0 0-282 216 0 116-116 0 1 0-150-1 0-115-115-216 0 0-282 282 0 0 215 116 116 215 0 0 0z" horiz-adv-x="1448" />
+</font>
+</defs>
+</svg>
