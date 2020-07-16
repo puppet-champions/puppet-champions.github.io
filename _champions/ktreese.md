@@ -5,7 +5,7 @@ image: https://avatars0.githubusercontent.com/u/3093560?v=4
 bio: Puppet enthusiast, evangelist, and moderator of /r/Puppet
 twitter: kristianreese
 github: ktreese
-linkedin: # the last part of your profile url
+linkedin: kristian-reese-a1944b5
 forge: ktreese
 slack: U16U0ASSG
 devto: ktreese
