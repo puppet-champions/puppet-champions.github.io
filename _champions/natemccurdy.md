@@ -3,9 +3,9 @@ layout: profile
 name: Nate McCurdy
 image: https://avatars2.githubusercontent.com/u/10200384?v=4
 bio: Lifelong geek, former sysadmin and Puppet PSE. Cloud Infrastructure Consultant @ openinfrastructure.co
-twitter:
+twitter: natemccurdy
 github: natemccurdy
-linkedin: # the last part of your profile url
+linkedin: natemccurdy
 forge: nate
 slack: U112RM52S
 devto:
