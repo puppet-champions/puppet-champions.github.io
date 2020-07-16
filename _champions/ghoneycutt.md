@@ -3,6 +3,14 @@ layout: profile
 name: Garrett Honeycutt
 image: https://avatars3.githubusercontent.com/u/313891?v=4
 bio: Providing Puppet automation consulting and training at Tailored Automation
+twitter: _ghoneycutt
+github: ghoneycutt
+linkedin: # the last part of your profile url
+forge: ghoneycutt
+slack: U2PU8Q22G
+devto:
+# You can find your StackExchange from the "network profile" link on your stackoverflow page
+stackexchange: # Use the number and username both from your url, eg `15186808/binford2k`
 ---
 
 Garrett Honeycutt, Principal at [Tailored Automation](https://tailoredautomation.io),
