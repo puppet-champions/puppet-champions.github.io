@@ -3,6 +3,14 @@ layout: profile
 name: Alexander Fisher
 image: https://avatars1.githubusercontent.com/u/146471?v=4
 bio: A freelance Linux system administrator, network and DevOps engineer specialising in automation and Puppet.
+twitter:
+github: alexjfisher
+linkedin: alexander-fisher-3a369950
+forge:
+slack: U5V9MMW9E
+devto:
+# You can find your StackExchange from the "network profile" link on your stackoverflow page
+stackexchange: # Use the number and username both from your url, eg `15186808/binford2k`
 ---
 
 Based in the South West of England, Alex is the director of Linfratech Ltd, a consultancy company specialising in Linux systems, automation and configuration management with Puppet.
