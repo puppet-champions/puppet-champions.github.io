@@ -6,8 +6,8 @@ bio: "@virtapi Stack founder, I do things with Arch Linux, and Puppet on @voxpup
 twitter: BastelsBlog
 github: bastelfreak
 linkedin: # the last part of your profile url
-forge:
-slack: # go to your slack profile, use the [...] more button to copy your member ID
+forge: bastelfreak
+slack: U1PC2RAH0 # go to your slack profile, use the [...] more button to copy your member ID
 devto:
 # You can find your StackExchange from the "network profile" link on your stackoverflow page
 stackexchange: # Use the number and username both from your url, eg `15186808/binford2k`
