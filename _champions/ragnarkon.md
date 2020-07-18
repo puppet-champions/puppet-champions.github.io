@@ -5,7 +5,7 @@ image: https://www.gravatar.com/avatar/789a3b4191903f4b45a8e3fff7135534?s=460
 bio: SysAdmin currently obsessed with configuration management.
 twitter: ragnarkon
 github: ragnarkon
-linkedin: # the last part of your profile url
+linkedin: bryanwoolsey
 forge:
 slack: U57RDGL4W
 devto: ragnarkon
