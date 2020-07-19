@@ -6,7 +6,7 @@ bio: "@virtapi Stack founder, I do things with Arch Linux, and Puppet on @voxpup
 twitter: BastelsBlog
 github: bastelfreak
 linkedin: # the last part of your profile url
-forge: bastelfreak
+forge: puppet
 slack: U1PC2RAH0 # go to your slack profile, use the [...] more button to copy your member ID
 devto:
 # You can find your StackExchange from the "network profile" link on your stackoverflow page
