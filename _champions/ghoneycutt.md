@@ -3,6 +3,11 @@ layout: profile
 name: Garrett Honeycutt
 image: https://avatars3.githubusercontent.com/u/313891?v=4
 bio: Providing Puppet automation consulting and training at Tailored Automation
+twitter: _ghoneycutt
+github: ghoneycutt
+linkedin: garretthoneycutt
+forge: ghoneycutt
+slack: U2PU8Q22G
 ---
 
 Garrett Honeycutt, Principal at [Tailored Automation](https://tailoredautomation.io),
