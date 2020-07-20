@@ -3,6 +3,14 @@ layout: profile
 name: Bryan Woolsey
 image: https://www.gravatar.com/avatar/789a3b4191903f4b45a8e3fff7135534?s=460
 bio: SysAdmin currently obsessed with configuration management.
+twitter: ragnarkon
+github: ragnarkon
+linkedin: bryanwoolsey
+forge:
+slack: U57RDGL4W
+devto: ragnarkon
+# You can find your StackExchange from the "network profile" link on your stackoverflow page
+stackexchange: # Use the number and username both from your url, eg `15186808/binford2k`
 ---
 
 Bryan Woolsey is an Engineering Manager at [Travelers](https://www.travelers.com), responsible for aspects of the configuration management and application delivery toolsets. He
