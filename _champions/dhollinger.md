@@ -3,6 +3,14 @@ layout: profile
 name: David Hollinger III
 image: https://avatars1.githubusercontent.com/u/2914211?v=4
 bio: Linux admin, Ruby and Puppet developer, technology, and gaming geek. Infrastructure Engineer for @HeyFlywheel. Do Puppet for @voxpupuliorg.
+twitter: moduletux
+github: dhollinger
+linkedin: # the last part of your profile url
+forge: dhollinger
+slack: U11KK362D
+devto: dhollinger
+# You can find your StackExchange from the "network profile" link on your stackoverflow page
+stackexchange: # Use the number and username both from your url, eg `15186808/binford2k`
 ---
 
 # David Hollinger III
