@@ -3,6 +3,14 @@ layout: profile
 name: Alessandro Franceschi
 image: https://avatars2.githubusercontent.com/u/283804?v=4
 bio: More Op than Dev at example42
+twitter: alvagante
+github: alvagante
+linkedin: # the last part of your profile url
+forge:
+slack: U12GA4U87
+devto:
+# You can find your StackExchange from the "network profile" link on your stackoverflow page
+stackexchange: # Use the number and username both from your url, eg `15186808/binford2k`
 ---
 
 Proud participant of the very first PuppetCamp in SanFrancisco, he has continued to work and experiment with Puppet.
